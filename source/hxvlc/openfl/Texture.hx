@@ -30,6 +30,8 @@ class Texture extends TextureBase
 
 		__textureTarget = __context.gl.TEXTURE_2D;
 
+		__internalFormat = __format = __context.gl.RGBA;
+
 		__frameSize = width * height * 4;
 
 		__context.__bindGLTexture2D(__textureID);
