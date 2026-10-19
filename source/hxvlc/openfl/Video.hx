@@ -755,7 +755,7 @@ class Video extends Bitmap
 		// so rather than having a crash, it would be best to keep it using this,
 		// it isnt the end of the world tho since, even with async rendering, the performance woudnt change,
 		// we aint losing nothing ¯\(ツ)/¯
-		videoOutput = new VideoOutput(mediaPlayer, "RV32", 4);
+		videoOutput = new VideoOutput(mediaPlayer, null, null, "RGBA", 4);
 		videoOutput.onFormatSetup = (width:Int, height:Int) -> MainLoop.runInMainThread(() -> videoOutput_onSetup(width, height));
 		videoOutput.onDisplay = (pixels:BytesData) -> MainLoop.runInMainThread(() -> videoOutput_onDisplay(pixels));
 	}
